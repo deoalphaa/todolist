@@ -51,7 +51,7 @@ function deleteAllTodo() {
 }
 
 function filterTodo() {
-
+    
 }
 
 function renderTodoList() {
@@ -59,7 +59,11 @@ function renderTodoList() {
     todoListContainer.innerHTML = '';
 
     todoList.forEach((item) => {
-        todoListContainer.innerHTML +=
-        `<p>${item.task} - Due: ${item.dueDate}</p>`;
+        todoListContainer.innerHTML +=`
+        <div class="flex justify-between">
+        <p class="m-0">${item.task} - Due: ${item.dueDate}</p>
+        <input type="checkbox" id="check" class="w-5 h-5 m-0">
+        </div>
+        `;
     });
 }

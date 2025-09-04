@@ -16,24 +16,24 @@
     </header>
 
     <main>
-        <section id="todo-input-section" class="py-[16px] flex justify-between">
-                <input type="text" class="border rounded p-2" id="todo-input" placeholder="Add a todo...">
-                <input type="date" class="border rounded p-2" id="todo-date-input">
-                <button class="bg-blue-500 text-white px-4 py-2" id="add-todo-button" onclick="validateInput()">+</button>
+        <section id="todo-input-section" class="py-[16px] flex gap-2">
+                <input type="text" class="flex-1 border rounded p-3" id="todo-input" placeholder="Add a todo...">
+                <input type="date" class="flex-1 border rounded p-3" id="todo-date-input">
+                <button class="bg-[#357CC6] text-white px-4 py-2 hover:bg-[#45B6FE]" id="add-todo-button" onclick="validateInput()">+</button>
         </section>
 
         <section class="flex justify-between">
-            <button class="bg-blue-500 text-white px-4 py-2" onclick="filterTodo()">
+            <button class="bg-[#357CC6] text-white px-4 py-2 hover:bg-[#45B6FE]" onclick="filterTodo()">    
                 filter
             </button>
-            <button class="bg-red-500 text-white px-4 py-2" onclick="deleteAllTodo();">
+            <button class="bg-[#950606] text-white px-4 py-2 hover:bg-[#d48181]" onclick="deleteAllTodo();">
                 delete all
             </button>
         </section>
 
         <section class="py-[16px]">
-            <h2 class="text-xl font-bold">list of to-do</h2>
-            <ul id="todo-list" class="text-center">
+            <h2 class="text-xl font-bold m-0">list of to-do</h2>
+            <ul id="todo-list" class="text-center"> 
                 <p>no task</p>
             </ul>
             <input type="">
