@@ -5,30 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo List</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <div class="box">
-        <h1>Todo List</h1>
-        <form>
-            <input type="text" id="addtodo" name="addtodo" placeholder="Add a todo..." required>
-            <input type="date" id="date" name="date" required>
-            <button id="plus">+</button>
-        </form>
-        <button id="filter">FILTER</button>
-        <button id="delete">DELETE ALL</button>
-        
-        <table id="todolist">
-            <tr>
-                <th>TASK</th>
-                <th>DUE DATE</th>
-                <th>STATUS</th>
-                <th>ACTIONS</th>
-            </tr>
-            <tr>
-                <td id="notask">no task found</td>
-            </tr>
-        </table>
-    </div>
+    <header>
+        <h1 class="text-3xl font-bold">Todo List</h1>
+    </header>
+
+    <main>
+        <section id="todo-input-section" class="py-[16px]">
+            <form>
+                <input type="text" class="border rounded p-2" id="todo-input" placeholder="Add a todo...">
+                <input type="date" class="border rounded p-2" id="todo-date-input">
+                <button class="bg-blue-500 text-white px-4 py-2" id="add-todo-button" onclick="validateInput();">+</button>
+            </form>
+        </section>
+
+        <section class="flex justify-between">
+            <button class="bg-blue-500 text-white px-4 py-2">
+                FILTER
+            </button>
+            <button class="bg-red-500 text-white px-4 py-2" onclick="deleteAllTodo();">
+                DELETE ALL
+            </button>
+        </section>
+
+        <section class="py-[16px]">
+            <h2 class="text-xl font-bold">List of Todo</h2>
+            <ul id="todo-list" class="text-center">
+                <p>no task</p>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="text-center py-[16px]">&copy;2025 Deo Todo List</footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>

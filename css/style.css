@@ -1,4 +1,10 @@
 body {
+    height: 100vh;
+    justify-items: center;
+    align-content: center;
+}
+
+/* body {
     background: linear-gradient(130deg, #3c597a, #547dab);
     font-family: "Helvetica Neue";
     display: flex;
@@ -45,7 +51,7 @@ h1 {
   text-align: center;
   justify-content: center;
   align-items: center;
-  -webkit-backdrop-filter: blur(15px); /*Safari*/
+  -webkit-backdrop-filter: blur(15px); 
 }
 
 #filter {
@@ -95,4 +101,4 @@ th, td {
     font-weight: 800;
     text-align: left;
     padding: 10px;
-}
+} */
