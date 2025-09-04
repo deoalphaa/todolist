@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo List</title>
-    
-    <link rel="stylesheet" href="css/style.css">
 
+    <link rel="stylesheet" href="css/style.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
@@ -16,11 +16,9 @@
 
     <main>
         <section id="todo-input-section" class="py-[16px]">
-            <form>
                 <input type="text" class="border rounded p-2" id="todo-input" placeholder="Add a todo...">
                 <input type="date" class="border rounded p-2" id="todo-date-input">
-                <button class="bg-blue-500 text-white px-4 py-2" id="add-todo-button" onclick="validateInput();">+</button>
-            </form>
+                <button class="bg-blue-500 text-white px-4 py-2" id="add-todo-button" onclick="validateInput()">+</button>
         </section>
 
         <section class="flex justify-between">

@@ -36,6 +36,6 @@ function renderTodoList() {
 
     todoList.forEach((item) => {
         todoListContainer.innerHTML +=
-        '<p>${item.task} - Due: ${item.dueDate}</p>';
+        `<p>${item.task} - Due: ${item.dueDate}</p>`;
     });
 }
