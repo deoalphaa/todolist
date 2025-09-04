@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Todo List</h1>
-    <form>
-        <input type="text" id="addtodo" name="'addtodo" placeholder="Add a todo...">
-    </form>
+    <div class="box">
+        <h1>Todo List</h1>
+        <form>
+            <input type="text" id="addtodo" name="addtodo" placeholder="Add a todo...">
+            <input type="date" id="date" name="date" placeholder="mm/dd/yyy">
+            <button id="plus">+</button>
+        </form>
+        <button id="filter">FILTER</button>
+        <button id="delete">DELETE ALL</button>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

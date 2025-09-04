@@ -1,8 +1,85 @@
 body {
-    background-color: #2F4156;
+    background: linear-gradient(130deg, #3c597a, #547dab);
     font-family: "Helvetica Neue";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
 }
 
 h1 {
-    color: #c4bbb5;
+    color: #a3c1d7;
+    font-size: 40px;
+}
+
+#addtodo, #date {
+    width: 36%;
+    padding: 10px;
+    border: 2px solid #567CBD;
+    border-radius: 8px;
+}
+
+#plus{
+    width: 3rem;
+    padding: 8px;
+    border: 2px solid #567CBD;
+    background-color:#567CBD;
+    border-radius: 8px;
+    font: bolder;
+    font-size: large;
+}
+
+#plus:hover {
+    border: 2px solid #486dac;
+    background-color:#486dac;
+}
+
+.box {
+  width: 550px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  -webkit-backdrop-filter: blur(15px); /*Safari*/
+}
+
+#filter {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:medium;
+    color:#3369c8a9;
+    box-shadow: 0 8px 100px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 15px;
+    width: 120px;
+    height: 40px;
+    translate: -16vh 1vh;
+    text-align: center;
+}
+
+#filter:hover {
+    color:#336ac8;
+    background-color: rgba(255, 255, 255, 0.301);
+}
+
+#delete {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:medium;
+    color:#f17a7a;
+    box-shadow: 0 8px 100px rgba(0, 0, 0, 0.2);
+    background-color: #0a43a46a;
+    border: none;
+    border-radius: 15px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    translate: 16vh 1vh;
+}
+
+#delete:hover {
+    color:#ca1010;
+    background-color: rgba(255, 255, 255, 0.301);
 }
