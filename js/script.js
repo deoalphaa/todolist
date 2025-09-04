@@ -51,8 +51,8 @@ function deleteAllTodo() {
 }
 
 function filterTodo() {
-    
 }
+
 
 function renderTodoList() {
     const todoListContainer = document.getElementById('todo-list');
