@@ -11,7 +11,7 @@ function loadData() {
         todoList = JSON.parse(storedTodos);
         if(todoList.length === 0){
             const noTask = document.getElementById('todo-list');
-            noTask.innerHTML = "<p>no task</p>";
+            noTask.innerHTML = "<p class='text-gray-300'>no task</p>";
         } else{
             renderTodoList();
         }
@@ -46,7 +46,7 @@ function deleteAllTodo() {
     todoList = [];
     localStorage.removeItem("todolist");
     const noTask = document.getElementById('todo-list');
-    noTask.innerHTML = "<p>no task</p>";
+    noTask.innerHTML = "<p class='text-gray-300'>no task</p>";
     saveData();
 }
 
@@ -58,14 +58,16 @@ function filterTodo() {
             const todoListContainer = document.getElementById('todo-list');
             todoListContainer.innerHTML = '';
             if(incompleteTodos.length === 0){
-                todoListContainer.innerHTML = "<p>no task</p>";
+                todoListContainer.innerHTML = "<p class='text-gray-300'>no task</p>";
             } else{
                 incompleteTodos.forEach((item) => {
                 todoListContainer.innerHTML +=`
-                <div class="flex justify-between">
-                <p class="m-0">${item.task} - Due: ${item.dueDate}</p>
-                <input type="checkbox" class="w-5 h-5 m-0" ${item.completed ? 'checked' : ''} onclick="toggleComplete(${todoList.indexOf(item)})">
-                </div>
+                <li>
+                    <div class="flex justify-between">
+                        <p class="m-0 text-gray-400"><strong>${item.task} - Due: ${item.dueDate}</strong></p>
+                        <input type="checkbox" class="w-5 h-5 m-0" ${item.completed ? 'checked' : ''} onclick="toggleComplete(${todoList.indexOf(item)})">
+                    </div>
+                </li>
                 `;
             });
             }
@@ -87,10 +89,12 @@ function renderTodoList() {
 
     todoList.forEach((item, index) => {
         todoListContainer.innerHTML +=`
-        <div class="flex justify-between">
-        <p class="m-0">${item.task} - Due: ${item.dueDate}</p>
-        <input type="checkbox" class="w-5 h-5 m-0" ${item.completed ? 'checked' : ''} data-index="${index}" onclick="toggleComplete(${index})">
-        </div>
+        <li>
+            <div class="flex justify-between">
+                <p class="m-0 text-gray-400"><strong>${item.task} - Due: ${item.dueDate}</strong></p>
+                <input type="checkbox" class="w-5 h-5 m-0" ${item.completed ? 'checked' : ''} data-index="${index}" onclick="toggleComplete(${index})">
+            </div>
+        </li>
         `;
     });
 }
